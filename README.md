@@ -22,4 +22,4 @@ Alpheios для морфології. Кнопка **«Вступ»** відкр
 доповнення надчастотних лем, морфологія) — стороння робота на основі видання; можливі похибки
 цієї обробки належать їй, а не авторові.
 
-[GitHub](https://github.com/exocortex-ancientgreek/exocortex-plutarch-suchalkin) · [Telegram](https://t.me/exocortex_ancientgreek) · [YouTube](https://www.youtube.com/@exocortex_ancientlanguages)
+[GitHub](https://github.com/exocortex-ancientgreek/exocortex-plutarch-suchalkin) · [Telegram](https://t.me/exocortex_ancientgreek)
