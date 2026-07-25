@@ -11,7 +11,7 @@ Alpheios для морфології. Кнопка **«Вступ»** відкр
 - **Сайт:** https://exocortex-ancientgreek.github.io/exocortex-plutarch-suchalkin/
 - **Автор:** [сайт](https://suchalkin.wixsite.com/greek/peri-emaytoy) · [публікації](https://suchalkin.wixsite.com/greek/naukova-literatura)
 - **Оригінали (PDF):** [текст видання](https://59500d52-1b27-43fb-928c-485a0c9aeebe.filesusr.com/ugd/96a2c7_4184c044e4c2420f9ef86ea59ffe0232.pdf) · [«Давньогрецько-український словник» (ХНУ, 2015)](https://59500d52-1b27-43fb-928c-485a0c9aeebe.filesusr.com/ugd/96a2c7_890e606f371a4d4abe7f873c2ec93e1c.pdf) —
-  надчастотні леми, яких немає у словнику цього видання, доповнено саме з нього (того ж автора).
+  надчастотні леми, яких немає у словнику цього видання, доповнено саме з нього (того ж автора) (працює, якщо нажата кнопка Додані слова).
 
 ## Ліцензія
 
