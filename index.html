@@ -204,12 +204,15 @@ dialog#allnotes .body b{font-family:"Gentium Plus",Georgia,serif;font-weight:600
 dialog#allnotes .close{margin-top:14px;width:100%;border-color:var(--rule);background:transparent;color:var(--ink)}
 
 @media(max-width:900px){
-  .pgbody{grid-template-columns:minmax(0,1fr);gap:0}
+  /* .pgbody — flex, тож на вузьких стосуємо колонки ВЕРТИКАЛЬНО (grid-* тут не діяв,
+     через що словник накладався на текст). За замовчуванням колонки сховані (JS),
+     показуються попапом; якщо ввімкнути — лягають під текстом. */
+  .pgbody{flex-direction:column;gap:0}
   .sheet{overflow:auto}
   .pg{height:auto;min-height:100%}
+  .txt,.voc,.notes{max-width:none;flex:0 0 auto}
   .txt,.voc{overflow:visible;min-height:0;padding-right:0}
-  .notes,.voc{border-left:0;border-top:1px solid var(--rule);padding:16px 0 0;margin-top:18px;overflow:visible}
-  html[data-notes="on"][data-voc="on"] .pgbody{grid-template-columns:minmax(0,1fr)}
+  .notes,.voc{border-left:0;border-inline-start:0;border-top:1px solid var(--rule);padding:16px 0 0;margin-top:18px;overflow:visible}
   .voc dl{column-width:200px;column-gap:24px}
   .voc dl div{break-inside:avoid}
   .sheet{padding:20px 16px}
@@ -620,6 +623,9 @@ dialog#allnotes .close{margin-top:14px;width:100%;border-color:var(--rule);backg
   var LABEL={t:'Text',v:'Vocab',n:'Commentary'};
 
   ['theme','nums','marks','voc','notes','order','flow','vlink','missing','sup'].forEach(function(k){ var v=LS.getItem('k.'+k); if(v) root.dataset[k]=v; });
+  // На вузьких екранах бічні колонки не влазять — ховаємо їх (текст на всю ширину,
+  // коментар/словник з'являються попапом при кліку). Кнопками можна ввімкнути.
+  if(matchMedia('(max-width:900px)').matches){ root.dataset.voc='off'; root.dataset.notes='off'; }
   var fs=parseFloat(LS.getItem('k.fs')||'21');
   function applyFs(){ root.style.setProperty('--fs', fs+'px'); }
   function sync(){
